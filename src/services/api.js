@@ -18,7 +18,7 @@ export const authAPI = axios.create({
 
 // Auth API instance for JSON requests (login, password reset)
 export const authAPIJson = axios.create({
-    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api/auth',
+    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
     headers: {
         'Content-Type': 'application/json',
     },
