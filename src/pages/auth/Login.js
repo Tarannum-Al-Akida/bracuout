@@ -26,13 +26,13 @@ const Login = () => {
     // Check API connectivity
     useEffect(() => {
         const checkAPI = async () => {
-                    try {
-            const response = await authAPIJson.get('/health');
-            setApiStatus('connected');
-        } catch (error) {
-            setApiStatus('disconnected');
-            toast.error('Cannot connect to server. Please check if the backend is running.');
-        }
+            try {
+                const response = await authAPIJson.get('/api/health');
+                setApiStatus('connected');
+            } catch (error) {
+                setApiStatus('disconnected');
+                toast.error('Cannot connect to server. Please check if the backend is running.');
+            }
         };
         checkAPI();
     }, []);
