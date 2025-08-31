@@ -27,7 +27,7 @@ const Login = () => {
     useEffect(() => {
         const checkAPI = async () => {
             try {
-                const response = await authAPIJson.get('/api/health');
+                const response = await authAPIJson.get('/health');
                 setApiStatus('connected');
             } catch (error) {
                 setApiStatus('disconnected');
