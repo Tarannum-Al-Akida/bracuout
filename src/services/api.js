@@ -55,7 +55,7 @@ api.interceptors.response.use(
 export const authEndpoints = {
     login: (data) => {
         // Use the JSON API instance for login
-        return authAPIJson.post('/api/login', data);
+        return authAPIJson.post('/api/auth/login', data);
     },
     register: (data) => {
         // Use the multipart API instance for registration (file uploads)
